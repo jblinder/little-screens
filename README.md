@@ -6,5 +6,4 @@ Website: [littlescreens.justinblinder.com](http://littlescreens.justinblinder.co
 Location: Compton Goethals Hall CG121  
 Instructor: [Justin Blinder](http://justinblinder.com/)
 
-[Course Wiki](https://github.com/jblinder/little-screens/wiki)  
-[Course Website](http://littlescreens.justinblinder.com)  
+[Course oultline and syllabus](https://github.com/jblinder/little-screens/wiki)  
