@@ -16,7 +16,7 @@ For Android users:
 
 ### Hosting/Testing
 
-We'll a need a url to point our simulator/device web browser to when testing out our code. You can choose to use GitHub, your CUNY website, or your own webserver to host your course assignments. A few other options for testing out your applications are:
+We'll a need a url to point our simulator/device web browser to when testing out our code. You can choose to use GitHub, your CUNY website, or your own webserver to host your course assignments. However, a few other options for quickly testing out your applications are:
 
 * [MAMP (Mac OSX)](http://www.mamp.info/en/) or [XAMPP (Windows)](https://www.apachefriends.org/index.html)
 	* Great for applications requiring a backend
