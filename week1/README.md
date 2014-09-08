@@ -19,10 +19,10 @@ For Android users:
 We'll a need a url to point our simulator/device web browser to when testing out our code. You can choose to use GitHub, your CUNY website, or your own webserver to host your course assignments. A few other options for testing out your applications are:
 
 * [MAMP (Mac OSX)](http://www.mamp.info/en/) or [XAMPP (Windows)](https://www.apachefriends.org/index.html)
-	* Best solution for applications requiring a backend
+	* Great for applications requiring a backend
 * [Dropbox](http://www.creativepro.com/article/how-to-use-dropbox-a-web-server-3-easy-steps)
-	* Quick, simple, free. 
+	* Quick, simple, free. No support for server-side code. 
 * [Start a webserver from the command line](http://lifehacker.com/start-a-simple-web-server-from-any-directory-on-your-ma-496425450)
-	* Great if you need to create a webserver immediately, but not a good long-term solution.
+	* If you need to create a webserver really quickly.
 
 
