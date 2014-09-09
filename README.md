@@ -7,5 +7,3 @@ Location: Compton Goethals Hall CG121
 Instructor: [Justin Blinder](http://justinblinder.com/)
 
 [Course oultline and syllabus](https://github.com/jblinder/little-screens/wiki)  
-
-This is a test.
