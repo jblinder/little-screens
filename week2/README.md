@@ -211,7 +211,7 @@ Your final HTML document will probably look something like the one below (your c
 
 On your GitHub profile, let's a new repository for this assignment. Go to your profile page, click on the repositories tab at the top, then click the green button that says "New" (or [click here to go straight there](https://github.com/new)). Name your repository "magic-8ball" (or something similar). *(If you have an entire repository dedicated to this class, you can create a new folder for this assignment instead of creating a separate repository.)*
 
-You should see a box that says "Quick setup" at the top of the screen. Copy the URL that starts with https:// (i.e. https://github.com/username/magic-8ball.git). At this point, you can either upload your assignment from the command line or from the GitHub application.
+You should see a box that says "Quick setup" at the top of the screen. At this point, you can either upload your assignment from the command line or from the GitHub application.
 
 **Uploading with the GitHub application**
 
@@ -228,7 +228,7 @@ You should see a box that says "Quick setup" at the top of the screen. Copy the 
 
 1. Open Terminal.  
 2. Type `cd ~/Desktop`  
-3. Type `git clone url` - replace url with the one you copied from the "Quick setup" box on GitHub.  
+3. Type `git clone url` - replace url with the one in the "Quick setup" box on GitHub.  
 4. Type `cd magic-8ball` or, if you named your repository something different, replace   magic-8ball with your repository name. 
 5. Type `open .`
 6. Drag and copy your project files into the `magic-8ball` folder in Finder  
