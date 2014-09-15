@@ -207,3 +207,32 @@ Your final HTML document will probably look something like the one below (your c
 </html>
 ```
 
+## 5: Uploading your code
+
+On your GitHub profile, let's a new repository for this assignment. Go to your profile page, click on the repositories tab at the top, then click the green button that says "New" (or [click here to go straight there](https://github.com/new)). Name your repository "magic-8ball" (or something similar). *(If you have an entire repository dedicated to this class, you can create a new folder for this assignment instead of creating a separate repository.)*
+
+You should see a box that says "Quick setup" at the top of the screen. Copy the URL that starts with https:// (i.e. https://github.com/username/magic-8ball.git). At this point, you can either upload your assignment from the command line or from the GitHub application.
+
+**Uploading with the GitHub application**
+
+1. In the box that says "Quick setup", click the green button that reads "Setup on Desktop" (this will automatically open your GitHub application, assuming you already downloaded it).
+2. Choose a location to save your repository.
+3. Open the repository location on your computer.
+4. Copy your project files into this folder.
+5. Go back to your GitHub application and click on the "Changes" tab at the top of the screen.
+6. You should see a commit button with a "Summary" text box below it. Enter a message for your commit (i.e. "Initial commit." or "Finished project.") 
+7. Click the circular button with a '+' symbol next to the commit button, then click the commit button.
+8. Check your github.com repository, your changes should now be online.
+
+**Uploading with the command line**  
+
+1. Open Terminal.  
+2. Type `cd ~/Desktop`  
+3. Type `git clone url` - replace url with the one you copied from the "Quick setup" box on GitHub.  
+4. Type `cd magic-8ball' or, if you named your repository something different, replace   magic-8ball with your repository name. 
+5 Type `open .`    
+6. Drag and copy your project files into the `magic-8ball` folder in Finder  
+7. In terminal, type `git add .`  
+8. Type 'git commit -m "Initial commit."`.  
+9. Type 'git push origin master'.  
+10. Check your github.com repository, your changes should now be online.  
