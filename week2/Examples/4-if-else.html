@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Is There Class Today?</title>
+</head>
+<body>
+<h1 id="answer"></h1>
+<script>
+
+	// Gives us a Javascript Date object with the current date
+	var date = new Date();
+	// Gives us a number that corresponds to the day of the week (starting with Sunday)
+	var currentDayNum = date.getDay();
+	// Gets the current day as a string for the number we pass in
+	var currentDay = getDayFromNumber(currentDayNum);
+	// Lets us know if there's class today
+	var classToday = isthereClassToday(currentDay);
+
+	// Access the DOM to get the answer id
+	var answer = document.getElementById('answer');
+	
+	// Write "yes" or "no" to the h1 answer element 
+	if (classToday) {
+		answer.innerHTML = "YES";
+	} 
+	else {
+		answer.innerHTML = "NO";
+	}
+
+	function isthereClassToday(day) {
+		if (day == "Monday") {
+			return true;
+		}
+		else if (day == "Tuesday") {
+			return true;
+		}
+		else if (day == "Wednesday") {
+			return true;
+		}
+		else if (day == "Thursday") {
+			return true;
+		}
+		else if (day == "Friday") {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	function getDayFromNumber(dayAsNum) {
+		if (dayAsNum == 0) {
+			return "Sunday";
+		}
+		else if (dayAsNum == 1) {
+			return "Monday";
+		}
+		else if (dayAsNum == 2) {
+			return "Tuesday";
+		}
+		else if (dayAsNum == 3) {
+			return "Wednesday";
+		}
+		else if (dayAsNum == 4) {
+			return "Thursday";
+		}
+		else if (dayAsNum == 5){
+			return "Friday";
+		}
+		else if (dayAsNum == 6){
+			return "Saturday";
+		}
+	}
+</script>
+</body>
+</html>
