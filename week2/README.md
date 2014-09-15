@@ -230,7 +230,7 @@ You should see a box that says "Quick setup" at the top of the screen. Copy the 
 2. Type `cd ~/Desktop`  
 3. Type `git clone url` - replace url with the one you copied from the "Quick setup" box on GitHub.  
 4. Type `cd magic-8ball' or, if you named your repository something different, replace   magic-8ball with your repository name. 
-5 Type `open .`    
+5. Type `open .`
 6. Drag and copy your project files into the `magic-8ball` folder in Finder  
 7. In terminal, type `git add .`  
 8. Type 'git commit -m "Initial commit."`.  
