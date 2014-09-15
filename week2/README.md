@@ -54,7 +54,7 @@ Now let's write some Javascript! When the button we added to our `<body>` is cli
 </script>
 ```
 
-Ok, so after we shake the 8 Ball, we'll need to ask the user a question. We can use Javascript's built in `prompt()` function to do this. We'll store the response in a variable, and access to DOM show it in the element with the `question` id.
+Ok, so after we shake the 8 Ball, we'll need to ask the user a question. We can use Javascript's built in `prompt()` function to do this. We'll store their response in a variable, and access the DOM show the display the answer in the element with a `question` id.
 
 ```Javascript
 	function shake(){
