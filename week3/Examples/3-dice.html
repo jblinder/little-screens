@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dice</title>
+</head>
+<body>
+	<header>Let's Roll Some Dice!</header>
+	<button onclick="start()">Roll Dice</button>
+	<h1 id="number-rolled">Defualt Value</h1>
+<script>
+	// Set the number of sides on die
+	var numSides = 6;
+
+	function start() {
+		// Roll the die and save the number
+		var numberRolled = rollDice(numSides);
+		
+		// Write the number rolled to the document. 
+		var element = document.getElementById('number-rolled');	
+		element.innerHTML = numberRolled;
+	}
+
+	// Roll dice
+	function rollDice(sides){
+		var number = getRandomInt(1,sides);
+		return number;
+	}
+
+	// Returns a random integer between two numbers
+	function getRandomInt(min,max){
+	    return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+</script>
+</body>
+</html>
