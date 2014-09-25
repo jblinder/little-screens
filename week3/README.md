@@ -93,7 +93,9 @@ Let's think about our fortune teller in terms of an object. Currently, we press 
 
 That's pretty straightforward. Ok, let's rewrite our Javascript code to use a fortune teller object. You can either copy and paste your project folder from last week to a new project, or work off of your existing code (instructions to upload the code are at the end of this document.)
 
-Make sure you use the same variable names throughout this assignment (i.e. naming your fortune teller object 'fortuneTeller'. You'll be changing the values of variables,  and you'll also want to use the answers and design you used from last week throughout this assignment.
+**Important**  
+Make sure you use the same variable names from this assignment (i.e. naming your fortune teller object `fortuneTeller` and your array of answers `answers`.) We're going to use our own answers from last week and assign them as values to the new `answers` array. **So, you'll still be using your own answers from last week**, since part of last week's assignment was to create **at least 8 different answers of your own**. We're just restructing how they are stored and retrieved. You can also use your design from last week throughout this assignment, but feel free to change or update it along the way. By the end of this assignment, you shoul be able to add new answers to your answers array and not have to touch any other code in order for your project to work -- the rest of the logic will update on its own.
+
 
 Ok, let's start by creating our `fortuneTeller` object and giving it a `promptText` property. This is the text we display to a user when we ask for their input. We'll use the [object literal notation](http://www.dyn-web.com/tutorials/object-literal/) we learned in class today.
 
