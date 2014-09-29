@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Magic 8 Ball</title>
+<style>
+#eight-ball{
+    width:500px;
+    margin: 0 auto;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+    <div id="eight-ball">
+        <button onclick="shake()">Shake</button>
+        <p id="question"></p>
+        <p id="answer"></p>
+    <div>
+</body>
+
+<script>
+
+	var fortuneTellers = [
+		{
+			promptText: "Ask me something.",
+			answerType: "text",
+			answers: [
+				"Hell Yeah",
+				"Aint nobody got time for that",
+				"Let me think about that",
+				"Ask again tomorrow",
+				"Yeah",
+				"Maybe",
+				"Nah I don't think so",
+				"Hell Naugh"
+			],
+			getAnswer: function(){
+				var min = 1;
+				var max = this.answers.length;
+				var index = Math.floor(Math.random() * (max - min + 1)) + min;
+				return this.answers[index-1];
+			}
+		},
+		{
+		    promptText: "Ask me a question.",
+			answerType: "image",
+			answers: [
+				"images/yes.png",
+				"images/no.png",
+				"images/yourwrong.png",
+				"images/yourbeautiful.png",
+				"images/maybe.png",
+				"images/yousuck.png",
+				"images/youramazing.png"
+				
+			],
+			getAnswer: function(){
+				var min = 1;
+				var max = this.answers.length;
+				var index = Math.floor(Math.random() * (max - min + 1)) + min;
+				return this.answers[index-1];
+			}
+		},
+		{
+		    promptText: "Ask me a question.",
+	        answerType: "flash",
+	        answers: [
+	            "image/yes.swf",
+	            "image/no.swf",
+	            "image/maybe.swf",
+	            "image/dontask.swf"  
+	        ],
+	        getAnswer: function(){
+	            var min = 1;
+	            var max = this.answers.length;
+	            var index = Math.floor(Math.random() * (max - min + 1)) + min;
+	            return this.answers[index-1];
+	        }
+		},
+		{
+	        promptText: "Ask me a question.",
+	        answerType: "image",     
+	        answers: [
+	           "images/no1.jpg",
+	           "images/yes1.jpg" ,
+	           "images/no2.jpg",
+	           "images/yes2.jpg",
+	           "images/maybe.jpg"
+	        ],
+	        getAnswer: function(){
+	            var min = 1;
+	            var max = this.answers.length;
+	            var index = Math.floor(Math.random() * (max - min + 1)) + min;
+	            return this.answers[index-1]; // Subtract 1 from the index
+	        }
+	    }
+	];
+
+
+	var min = 0;
+    var max = fortuneTellers.length-1;
+	var index = Math.floor(Math.random() * (max - min + 1)) + min;
+	var fortuneTeller = fortuneTellers[index];
+	
+    function shake() {
+
+        // Set the prompt text
+        var question = prompt(fortuneTeller.promptText);
+
+        // Display the question the user asked
+        var questionText = document.getElementById('question');
+        questionText.innerHTML = question;
+
+        // Ask our fotruneTeller for a random answer
+        var randomAnswer = fortuneTeller.getAnswer();
+
+        // Access the DOM element we want to to change
+        var fortuneText = document.getElementById('answer');
+
+        // Update the element with our answer.
+        if ( fortuneTeller.answerType == "text" ) {
+        	fortuneText.innerHTML = randomAnswer;
+        }
+        if ( fortuneTeller.answerType == "image" ){
+			fortuneText.innerHTML = '<img src="' + randomAnswer +'"/>';
+        }
+        if ( fortuneTeller.answerType == "flash"){
+        	fortuneText.innerHTML = '<embed src="' + randomAnswer +'"/>';
+        }
+    }
+
+</script>
+
+</html>

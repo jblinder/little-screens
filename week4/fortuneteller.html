@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<script type="text/javascript" src="js/modernizr.js"></script>
+<script type="text/javascript" src="js/shake.js"></script>
+<title>Magic 8 Ball</title>
+<style>
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 500;
+   font-size:18px;
+   color: #FFFFFF;
+   background: #FF555F;
+}
+
+#wrapper {
+    width:100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#eight-ball{
+    width: 100%;
+    margin: 50px 0 0 0;
+}
+
+#answer {
+
+}
+</style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="eight-ball">
+            <p id="question"></p>
+            <p id="answer"></p>
+        <div>
+    </div>
+</body>
+
+<script>
+window.onload = function() {
+    window.addEventListener('shake', shakeEventDidOccur, false);
+
+    //function to call when shake occurs
+    function shakeEventDidOccur () {
+        shake();
+    }
+
+
+    var fortuneTeller = {
+        promptText: "Ask me a question.",
+        answerType: "text",     
+        answers: [
+            "yes",
+            "no",
+            "maybe",
+            "never!",
+            "outlook isn't good"
+        ],
+        getAnswer: function(){
+            var min = 1;
+            var max = this.answers.length;
+            var index = Math.floor(Math.random() * (max - min + 1)) + min;
+            return this.answers[index-1]; // Subtract 1 from the index
+        }
+    };
+
+    function shake() {
+
+        // Set the prompt text
+        var question = prompt(fortuneTeller.promptText);
+
+        // Display the question the user asked
+        var questionText = document.getElementById('question');
+        questionText.innerHTML = question;
+
+        // Ask our fotruneTeller for a random answer
+        var randomAnswer = fortuneTeller.getAnswer();
+
+        // Access the DOM element we want to to change
+        var fortuneText = document.getElementById('answer');
+
+        // Update the element with our answer.
+        fortuneText.innerHTML = randomAnswer;
+    }
+};
+</script>
+
+</html>

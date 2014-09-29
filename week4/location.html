@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<script type="text/javascript" src="js/modernizr.js"></script>
+<title>Mobile App</title>
+<style>
+</style>
+</head>
+
+<body>
+<h1 id="geo"></h1>
+<script>
+
+	if ( Modernizr.geolocation ) {
+		navigator.geolocation.getCurrentPosition(success, error);
+	}
+
+	function success(position) {
+		console.log(position);
+		var el = document.getElementById('geo');
+		el.innerHTML = "lat: " + position.coords.latitude + " lng: " + position.coords.longitude;
+	}
+
+	function error(error) {
+		console.log(error);
+	}
+
+</script>
+
+</body>
+</html>
