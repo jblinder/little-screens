@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Scope Tests</title>
+<script>
+var a = 10;
+console.log("1) " + a);
+if (true) {
+	var a = 20;
+}
+console.log("2) " + a);
+
+function func(){
+	var a = 30;
+	console.log("3) " + a);
+	console.log(this);
+}
+
+func();
+console.log("4) " + a);
+</script>
+</head>
+<body>
+</body>
+</html>
