@@ -3,16 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<script type="text/javascript" src="js/modernizr.js"></script>
-<script type="text/javascript" src="js/shake.js"></script>
 <title>Magic 8 Ball</title>
 <style>
 body {
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    font-weight: 500;
    font-size:18px;
-   color: #FFFFFF;
-   background: #63EDE6;
+   color:#000000;
+   background: #FFFFFF;
 }
 
 #wrapper {
@@ -23,11 +21,16 @@ body {
 
 #eight-ball{
     width: 100%;
-    margin: 50px 0 0 0;
+    margin: 50px 0 0 0;    
 }
 
-#answer {
+.response {
+    color:#FF574C;
+}
 
+#history {
+    list-style: none;
+    padding: 0px;
 }
 </style>
 </head>
@@ -35,23 +38,26 @@ body {
 <body>
     <div id="wrapper">
         <div id="eight-ball">
-            <p id="question"></p>
-            <p id="answer"></p>
+            <button onclick="shake()">Shake Me!</button>
+            <p>Question</p>
+            <p id="question" class="response"></p>
+            <p>Answer</p>
+            <p id="answer" class="response"></p>
+           
+             <!-- History -->
+            <div>
+                <p>Question History</p>
+                <ul id="history" class="response">
+                </ul>
+            </div>
+
         <div>
     </div>
 <script>
-window.onload = function() {
-    window.addEventListener('shake', shakeEventDidOccur, false);
-
-    //function to call when shake occurs
-    function shakeEventDidOccur () {
-        shake();
-    }
-
-
     var fortuneTeller = {
         promptText: "Ask me a question.",
         answerType: "text",     
+        questionHistory: [],
         answers: [
             "yes",
             "no",
@@ -84,8 +90,25 @@ window.onload = function() {
 
         // Update the element with our answer.
         fortuneText.innerHTML = randomAnswer;
+
+        // Update history
+        updateHistory(question);
     }
-};
+
+    function updateHistory(q){
+        console.log(fortuneTeller.questionHistory);
+        // Add the question to our history array
+        fortuneTeller.questionHistory.push(q);
+
+        // Get the list we want to update
+        var historyList = document.getElementById('history');
+        // Clear the list every time we're about to update it
+        historyList.innerHTML = "";
+        // Loop through each history answer and add it as a list item
+        for ( var i = 0; i < fortuneTeller.questionHistory.length; i++ ) {
+            historyList.innerHTML += '<li>' + fortuneTeller.questionHistory[i] + '</li>';
+        }
+    }
 </script>
 </body>
 </html>

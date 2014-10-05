@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<title>Magic 8 Ball</title>
+<style>
+ul {
+    list-style: none;
+    width:500px;
+}
+
+li{
+    margin:4px;
+    padding:2px;
+    background:#F9FBF4;
+}
+
+.todo{
+    color:#3EE18B;
+    border: 1px solid #EDEDED;
+}
+
+.done {
+    color:#E1626A;
+    text-decoration: line-through;
+    border: 1px dotted #FBD4D2;
+}
+
+</style>
+<script>
+$(document).ready(function(){
+    $('li').each(function(){
+        $(this).addClass('todo');
+    });
+
+    $('li').click(function(){
+        if ($(this).hasClass('done') ) {
+            $(this).removeClass('done').addClass('todo');
+        }
+        else {
+            $(this).removeClass('todo').addClass('done');  
+        }
+        //$(this).addClass('done');
+        //$(this).removeClass('todo');
+        /*
+        $(this).fadeOut(700,function(){
+            $(this).remove();
+        });
+        */
+        //$(this).removeClass('todo').addClass('done');
+        
+    });
+
+    $('button').on('click',function(){
+        $('li').each(function(){
+            $(this).removeClass('done').addClass('todo');
+        });
+    });
+});
+</script>
+</head>
+<body>
+    <div id="wrapper">
+        <ul>
+            <li>Study for Physics exam</li>
+            <li>Buy eggs</li>
+            <li>Read emails</li>
+            <li>Walk dog</li>
+        </ul>
+        <button>Reset</button>
+    </div>
+</body>
+</html>

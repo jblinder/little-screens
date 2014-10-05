@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<script type="text/javascript" src="js/modernizr.js"></script>
-<script type="text/javascript" src="js/shake.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <title>Magic 8 Ball</title>
 <style>
 body {
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    font-weight: 500;
    font-size:18px;
-   color: #FFFFFF;
-   background: #63EDE6;
+   color:#000000;
+   background: #FFFFFF;
 }
 
 #wrapper {
@@ -23,11 +22,16 @@ body {
 
 #eight-ball{
     width: 100%;
-    margin: 50px 0 0 0;
+    margin: 50px 0 0 0;    
 }
 
-#answer {
+.response {
+    color:#FF574C;
+}
 
+#history {
+    list-style: none;
+    padding: 0px;
 }
 </style>
 </head>
@@ -35,20 +39,16 @@ body {
 <body>
     <div id="wrapper">
         <div id="eight-ball">
-            <p id="question"></p>
-            <p id="answer"></p>
+            <button id="shake-button">Shake Me!</button>
+            <p>Question</p>
+            <p id="question" class="response"></p>
+            <p>Answer</p>
+            <p id="answer" class="response"></p>
         <div>
     </div>
 <script>
-window.onload = function() {
-    window.addEventListener('shake', shakeEventDidOccur, false);
-
-    //function to call when shake occurs
-    function shakeEventDidOccur () {
-        shake();
-    }
-
-
+$(document).ready(function(){
+    
     var fortuneTeller = {
         promptText: "Ask me a question.",
         answerType: "text",     
@@ -67,25 +67,17 @@ window.onload = function() {
         }
     };
 
-    function shake() {
-
+    $('#shake-button').click(function(){
         // Set the prompt text
         var question = prompt(fortuneTeller.promptText);
-
         // Display the question the user asked
-        var questionText = document.getElementById('question');
-        questionText.innerHTML = question;
-
+        $('#question').html(question);
         // Ask our fotruneTeller for a random answer
         var randomAnswer = fortuneTeller.getAnswer();
-
-        // Access the DOM element we want to to change
-        var fortuneText = document.getElementById('answer');
-
-        // Update the element with our answer.
-        fortuneText.innerHTML = randomAnswer;
-    }
-};
+        // Access the DOM element we want to to change and update it with our answer.
+        $('#answer').html(randomAnswer);
+    });
+});
 </script>
 </body>
 </html>

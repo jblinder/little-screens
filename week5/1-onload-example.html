@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Event Example</title>
+    <script>
+        window.onload = function(){
+            // Our page has loaded, so we now have access to the "intro-text" id
+            console.log("Page loaded");
+            var introTextClass = document.getElementById('intro-text');
+            console.log(introTextClass);
+            introTextClass.innerHTML = "Hello Class!";    
+        }
+        // Our page hasn't loaded the "intro-text" id, so javascript can't access it yet
+        console.log("Page loading");
+        var introTextWorld = document.getElementById('intro-text');
+        console.log(introTextWorld);         
+        introTextWorld.innerHTML = "Hello World!";    
+    </script>
+    </head>
+
+    <body>
+        <h1 id="intro-text"></p>
+    <script>
+        console.log("Body finshed loading");
+        var introTextCUNY = document.getElementById('intro-text');
+        console.log(introTextCUNY);        
+        introTextCUNY.innerHTML = "Hello CUNY!";    
+    </script>
+    </body>
+</html>
