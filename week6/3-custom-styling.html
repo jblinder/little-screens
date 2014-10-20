@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>To-do list</title>
+    <style>
+
+    ul {
+        list-style: none;
+        width:500px;
+    }
+
+    li{
+        margin:4px;
+        padding:2px;
+        background:#e8e8e8;
+    }
+
+    .todo{
+        color:#3EE18B;
+        border: 1px solid #EDEDED;
+    }
+
+    .done {
+        color:#E1626A;
+        text-decoration: line-through;
+        border: 1px dotted #FBD4D2;
+    }
+
+    </style>
+<script>
+$(document).ready(function(){
+    // Application
+
+    // Resets the todo list
+    $('li').each(function(){
+        $(this).addClass('todo');
+    });
+
+    $('li').on('click',function(){
+        if ( $(this).hasClass('todo') ) {
+            $(this).addClass('done').removeClass('todo').fadeOut('slow', function() {
+                $(this).remove(); 
+            });
+        }
+        else {
+            $(this).addClass('todo');
+            $(this).removeClass('done');   
+        }
+    });
+
+    $('button').click(function(){
+        $('ul').append($('<li></li>').html($('#item').val()).addClass('todo'));
+    });
+});
+</script>
+</head>
+<body>
+    <div id="wrapper">
+        <input id="item"/>
+        <ul>
+            <li>Work on Midterm</li>
+            <li>Surf Youtube</li>
+            <li>Buy bananas</li>
+        </ul>
+        <button>Add</button>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
