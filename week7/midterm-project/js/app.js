@@ -61,11 +61,6 @@ $(document).ready(function(){
 		});
 	}
 
-	// Show an error if we can't access the weather
-	function showError(){
-		$('#temp').text('Oh no! Your forecast is currently unavailable.');
-		$('body').css('background-color','rgb(240,14,10');	
-	}
 
 	/*
 		3. Insert weather data into app and stylize
@@ -80,6 +75,12 @@ $(document).ready(function(){
 		$('#temp').addClass('degrees');
 		$('body').css('background-color',precipColor);
 		addWindAnimation();
+	}
+
+	// Show an error if we can't access the weather
+	function showError(){
+		$('#temp').text('Oh no! Your forecast is currently unavailable.');
+		$('body').css('background-color','rgb(240,14,10');	
 	}
 
 
