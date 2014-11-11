@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<title>Magic 8 Ball</title>
+<title>To-do list</title>
 <style>
 ul {
     list-style: none;
@@ -53,6 +53,7 @@ $(document).ready(function(){
         
     });
 
+    // Preferred 
     $('button').on('click',function(){
         $('li').each(function(){
             $(this).removeClass('done').addClass('todo');

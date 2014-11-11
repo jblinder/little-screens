@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Catify</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Important if we are handling landscape mode, becasue the device width changes -->
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+   
+</head>
+<body>
+
+	<div id="photos" data-role="page">
+		<div data-role="header">
+			<h1>Bombay</h1>
+			<a href="index.html" data-icon="home" data-transition="slide" data-direction="reverse">Home</a>
+
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#photos" data-icon="grid" data-transition="fade" class="ui-btn-active ui-state-persist">Photos</a></li>
+					<li><a href="#info" data-icon="info" data-transition="fade">Facts</a></li>
+					<li><a href="#summary" data-icon="plus" data-transition="fade">Summary</a></li>
+				</ul>
+			</div>
+			
+		</div>
+		<div data-role="content">
+			<h2>Photos</h2>
+			<img src="http://upload.wikimedia.org/wikipedia/commons/1/16/Bombay_cat.jpg"/>
+		</div>
+	</div>
+
+	<div id="info" data-role="page">
+		<div data-role="header">
+			<h1>Bombay</h1>
+			<a href="index.html" data-icon="home" data-transition="slide" data-direction="reverse">Home</a>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#photos" data-icon="grid" data-transition="fade">Photos</a></li>
+					<li><a href="#info" data-icon="info" data-transition="fade" class="ui-btn-active ui-state-persist">Facts</a></li>
+					<li><a href="#summary" data-icon="plus" data-transition="fade">Summary</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			<h2>Facts</h2>
+			<ul>
+				<li><h3>Country</h3> <p>United States<p></li>
+				<li><h3>Orgin</h3> <p>Crossbreed</p></li>
+				<li><h3>Bodytype</h3> <p>Moderate</p></li>
+				<li><h3>Coat</h3> <p>Short</p></li>
+				<li><h3>Pattern</h3> <p>Solid</p></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="summary" data-role="page">
+		<div data-role="header" data-id="nav" data-position="fixed">
+			<h1>Bombay</h1>
+			<a href="index.html" data-icon="home" data-transition="slide" data-direction="reverse">Home</a>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#photos" data-icon="grid" data-transition="fade">Photos</a></li>
+					<li><a href="#info" data-icon="info" data-transition="fade">Facts</a></li>
+					<li><a href="#summary" data-icon="plus" data-transition="fade" class="ui-btn-active ui-state-persist">Summary</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			<h2>Summary</h2>
+			<p>Bombay are a type of shorthaired cats developed by breeding sable Burmese and black American Shorthair cats to produce a cat of mostly Burmese type, but with a sleek, tight black coat.</p>
+		</div>
+	</div>
+
+
+</body>
+</html>

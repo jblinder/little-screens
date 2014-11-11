@@ -16,14 +16,28 @@ li{
     background:#e8e8e8;
 }
 
+.todo {
+    color:#0000FF;
+}
+
+.done {
+    color:#FF0000;
+}
+
 </style>
 <script>
 
 $(document).ready(function(){
 
-    $('ul li').on('click', function(){
-        $(this).hide(); 
+    $('ul li').on('click', function() {
+        if ( $(this).hasClass('todo') ) {
+            $(this).addClass('done').removeClass('todo');
+        }
+        else {
+            $(this).addClass('todo').removeClass('done');   
+        }
     });
+
 
     $('ul li').addClass('todo');
 

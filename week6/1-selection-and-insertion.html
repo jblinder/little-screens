@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="jquery-2.1.1.min.js"></script>
     <title>Show/Hide</title>
     <script>
         $(document).ready(function(){
-            $('#intro').html('<p>Hello World!</p>');
+            var content = $('#intro').text();
+            console.log(content);
         });
     </script>
 </head>
 <body>
-    <div id="intro"></div>
+    <div id="intro">Hello World</div>
 </body>
 </html>
 

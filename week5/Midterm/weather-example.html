@@ -3,17 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Getting the local weather</title>
-<script src="js/modernizr.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 
 $(document).ready(function(){
-	var apiKey = 'your ip key goes here';
+	var apiKey = 'a586d11648043cec0b74207005ff6a5d';
 	var apiURL = 'https://api.forecast.io/forecast/' + apiKey; 
 
-	if ( Modernizr.geolocation ) {
 		navigator.geolocation.getCurrentPosition(success, error);
-	}
 
 	function success(position) {
 		console.log(position);

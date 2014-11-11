@@ -4,21 +4,31 @@
 <meta charset="UTF-8">
 <title>Scope Tests</title>
 <script>
+
 var a = 10;
 console.log("1) " + a);
-if (true) {
-	var a = 20;
-}
-console.log("2) " + a);
+
+// if (true) {
+// 	var a = 20;
+// 	console.log("2) " + a);
+// }
+
+// console.log("3) " + a);
+
 
 function func(){
 	var a = 30;
-	console.log("3) " + a);
-	console.log(this);
+	console.log("2) " + a);
+	function func2(){
+		var b = 555;
+		console.log(a);
+	}
+	func2();
+	console.log(b);
 }
 
 func();
-console.log("4) " + a);
+console.log("3) " + a);
 </script>
 </head>
 <body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Catify</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Important if we are handling landscape mode, becasue the device width changes -->
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+   
+</head>
+<body>
+	<div data-role="page"> <!-- HTML data attribute, jQuery uses this to style the different divs according to their role -->
+		<div data-role="header">
+			<h1>Catify</h1>
+		</div>
+		<div data-role="content">
+			<h2>Cats</h2>
+			<!-- Data set http://en.wikipedia.org/wiki/List_of_cat_breeds !-->
+			<ul data-role="listview" data-filter="true">
+				<li data-role="list-divider">Hairless</li>
+				<li><h3>Donskoy</h3><p>Russia</p></li>
+
+				<li data-role="list-divider">Short Hair</li>
+				<li><a href="bombay.html" data-transition="flip"><h3>Bombay</h3><p>United States</p></a></li>
+				
+				<li data-role="list-divider">Long Hair</li>
+				<li><h3>Balinese</h3><p>United States</p></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
